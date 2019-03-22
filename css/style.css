@@ -1,0 +1,334 @@
+* {
+
+    box-sizing: border-box;
+}
+
+:root {
+    --main-white: rgb(255, 255, 255);
+    --main-green: rgb(23, 129, 49);
+    --light-green: rgb(24, 186, 96);
+    --main-text-color: rgb(40, 40, 40);
+}
+
+body {
+    color: var(--main-text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+
+a {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+}
+
+
+.btn {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+
+.btn-solid {
+    background: var(--light-green);
+    border: 1px solid var(--light-green);
+    color: rgb(255, 255, 255);
+}
+
+.mobile-nav {
+    background: var(--main-white);
+    box-shadow: 1px 2px 2px rgb(212, 212, 212);
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+
+.naccia-logo img {
+    height: auto;
+    margin-left: 10px;
+    width: 50px;
+}
+
+.menu-icon i {
+    font-size: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.links {
+    background: rgb(53, 53, 53);
+    color: var(--main-white);
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    transition: .5s all ease-in;
+    width: 0;
+}
+
+
+.links a {
+    color: var(--main-white);
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    transform: rotate(45deg);
+}
+
+.close:hover{
+    transform: rotate(-45deg);
+}
+
+
+a.sub-menu::after{
+    content: '+';
+    padding-left: 10px;
+}
+
+.sub-links {
+    color: var(--main-white);
+    display: none;  
+}
+
+a.sub-link  {
+    font-size: 14px;
+    color: var(--main-white);
+    padding: 3px 20px;
+    text-transform: capitalize;
+}
+
+.sub-active {
+    display: block;
+    transition: .4s all ease-in-out;
+}
+
+
+
+.slides {
+    background: linear-gradient(to right, rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.7)), url(../img/slide-one-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+
+.slide-desc {
+    color: var(--main-white);
+    padding-top: 90px;
+    margin-left: 20px;
+}
+
+.slider-sub {
+    margin-bottom: 12px;
+}
+
+.dots {
+    position: relative;
+    text-align: center;
+    top: -40px;
+}
+
+.dot {
+    background: rgb(180, 180, 180);
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    margin-left: 5px;
+    width: 25px;
+}
+
+.dot:first-child {
+    margin-left: 0;
+}
+
+.dot:hover {
+    background: rgb(11, 170, 51);
+    transition: .4s all ease-out;
+}
+
+
+.naccia-brief {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.brief-title {
+    color: var(--main-green);
+    display: inline-block;
+}
+
+.brief-desc {
+    color: var(--main-text-color);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.brief-service {
+    height: 320px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+.brief-service img {
+    height: auto;
+    width: 100%;
+}
+
+.service-desc {
+    background: var(--light-green);
+    bottom: -1px;
+    color: var(--main-white);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 13px 10px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.service-desc a {
+    color: var(--main-white);
+}
+
+.naccia-funding-img {
+    height: 250px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.naccia-funding-img img {
+    height: auto;
+    width: 100%;
+}
+
+footer {
+    background: rgb(37, 39, 46);
+}
+
+footer .brief-desc {
+    color: var(--main-white);
+}
+
+.footer-about, .footer-contact, .footer-socials {
+    margin-bottom: 35px;
+}
+
+.footer-about img {
+    height: auto;
+    width: 80px;
+}
+
+.footer-about p{
+    color: var(--main-white);
+}
+.footer-socials, .footer-contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-socials li {
+    border: 1px solid var(--main-white);
+    display: inline-block;
+    margin-left: 15px;
+    padding: 8px 12px;
+}
+
+.footer-socials li:first-child {
+    margin-left: 0;
+}
+
+.footer-socials li a{
+    color: var(--main-white);
+    font-size: 20px;
+}
+
+.footer-contact h2{
+    color: var(--main-white);
+}
+
+.footer-contact li {
+    border-bottom: 1px solid rgb(70, 70, 70);
+    color: var(--main-white);
+    font-size: 17px;
+    padding: 10px;
+}
+
+.footer-contact li span {
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+.newsletter {
+    color: var(--main-white);
+}
+
+
+.newsletter form {
+    text-align: center;
+}
+
+.newsletter input[type="email"] {
+    border: 1px solid rgb(40, 40, 40);
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+.newsletter button {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.copyright {
+    background: rgb(87, 87, 87);
+    margin-top: 30px;
+    padding: 3px 0 10px 0;
+}
+
+.copyright p {
+    text-align: center;
+}
+
+.copyright p i{
+    color: rgb(240, 53, 53);
+}
